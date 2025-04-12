@@ -49,12 +49,6 @@ def check_password_strength(password):
            for tip in feedback:
             st.write(tip)
      
-        
-# Function to generate a random password
-
-def generate_password():
-    characters = string.ascii_letters + string.digits + "!@#$%^&*()_+={}\[\]:;<>,.?/~"
-    return "".join(random.choice(characters) for _ in range(12))
 
 password = st.text_input("Enter Your Password:", type="password")
 if password:
@@ -63,6 +57,12 @@ else:
         st.warning("⚠️Please enter a password")
 
 st.markdown("---")
+
+# Function to generate a random password
+
+def generate_password():
+    characters = string.ascii_letters + string.digits + "!@#$%^&*()_+={}\[\]:;<>,.?/~"
+    return "".join(random.choice(characters) for _ in range(12))
 
 # Password Generator Section
 st.subheader("🔑 Generate a Strong Password")
